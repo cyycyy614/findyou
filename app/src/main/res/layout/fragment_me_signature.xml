@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+    <EditText
+        android:id="@+id/et_signature"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@android:color/transparent"
+        android:gravity="center_vertical"
+        android:singleLine="true"
+        android:maxLines="1"
+        android:paddingLeft="10dp"
+        android:textColor="#000000"
+        android:textSize="16sp"
+        android:textCursorDrawable="@drawable/control_editview_cursor"
+        />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="#cccccc"
+        ></View>
+
+</LinearLayout>

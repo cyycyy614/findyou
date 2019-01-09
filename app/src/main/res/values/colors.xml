@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="colorWhite">#ffffff</color>
+    <color name="colorBlack">#000000</color>
+    <color name="colorLine">#dddddd</color>
+    <color name="colorGray">#cccccc</color>
+    <color name="colorGray9">#999999</color>
+    <color name="colorGrayD">#dddddd</color>
+    <color name="colorGrayE">#eeeeee</color>
+    <color name="colorGray6">#666666</color>
+    <!-- 礼物弹窗背景 -->
+    <color name="pop_window_background">#B4000000</color>
+    <color name="white">@android:color/white</color>
+    <color name="white_bg">@android:color/white</color>
+    <color name="white_6E">#6Effffff</color>
+    <color name="fragment_bk">#eeeeee</color>
+    <color name="defaultColor">#ff5500</color>
+    <color name="itemRightTextColor">#999999</color>
+    <color name="a2">#999</color>
+</resources>

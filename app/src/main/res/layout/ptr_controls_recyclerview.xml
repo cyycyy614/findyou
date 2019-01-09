@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/view_root"
+    >
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <cn.finalteam.loadingviewfinal.PtrClassicFrameLayout
+            android:id="@+id/ptr_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <cn.finalteam.loadingviewfinal.RecyclerViewFinal
+                android:id="@+id/recyclerViewFinal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:divider="@null"
+                app:loadMoreMode="scroll"
+                app:loadMoreView="cn.finalteam.loadingviewfinal.DefaultLoadMoreView"
+                android:scrollbars="vertical"
+                />
+        </cn.finalteam.loadingviewfinal.PtrClassicFrameLayout>
+        <com.findyou.findyoueverywhere.controls.EmptyView
+            android:id="@+id/view_empty"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:visibility="gone"
+            />
+    </FrameLayout>
+</LinearLayout>

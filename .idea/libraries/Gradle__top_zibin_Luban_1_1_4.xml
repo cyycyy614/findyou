@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="Gradle: top.zibin:Luban-1.1.4">
+    <CLASSES>
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/Luban-1.1.4.aar/5b094f3be8b38e3576a4c7100865fce5/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/Luban-1.1.4.aar/5b094f3be8b38e3576a4c7100865fce5/jars/classes.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/top.zibin/Luban/1.1.4/1c7154f319e19263a316a62ef5a2d123e79a2634/Luban-1.1.4-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

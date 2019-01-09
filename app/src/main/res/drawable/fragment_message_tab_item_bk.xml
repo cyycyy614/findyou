@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android" >
+    <!-- This is the line -->
+    <!--<item android:left="8dp" android:right="8dp">-->
+        <!--<shape>-->
+            <!--<solid android:color="@color/colorBlack" />-->
+        <!--</shape>-->
+    <!--</item>-->
+    <item android:state_selected="true" android:color="@color/colorBlack" android:bottom="3dp">
+        <shape>
+            <solid android:color="@color/colorBlack" />
+        </shape>
+    </item>
+    <item android:state_selected="true" android:color="#ff0000" android:bottom="3dp">
+        <shape>
+            <solid android:color="@color/defaultColor" />
+        </shape>
+    </item>
+</selector>

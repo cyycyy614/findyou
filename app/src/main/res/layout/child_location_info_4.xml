@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/iv_headimage"
+            android:layout_width="36dp"
+            android:layout_height="36dp" />
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/iv_headimage_big"
+            android:layout_width="45dp"
+            android:layout_height="45dp" />
+    </FrameLayout>
+</LinearLayout>
