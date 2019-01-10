@@ -11,6 +11,7 @@ import com.findyou.findyoueverywhere.constant.EventConst;
 import com.findyou.findyoueverywhere.controls.dialog.CommomDialog;
 import com.findyou.findyoueverywhere.ui.login.LoginFragment;
 import com.findyou.findyoueverywhere.utils.ActivityManagerUtils;
+import com.findyou.findyoueverywhere.utils.LoadingUtils;
 import com.findyou.findyoueverywhere.utils.LocalStorage;
 import com.findyou.findyoueverywhere.utils.PicUtils;
 
@@ -31,6 +32,11 @@ public class AccountManagerFragment extends BaseFragment {
         return R.layout.fragment_account_manager;
     }
 
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
+    }
+
     public void initView(){
         PicUtils.loadImage(getContext(), app.me.headimage, iv_headimage);
         tv_nickname.setText(app.me.nickname);
@@ -39,7 +45,7 @@ public class AccountManagerFragment extends BaseFragment {
 
     @OnClick(R.id.tv_submit)
     public void tv_submit_Click(View view){
-        CommomDialog dlg = new CommomDialog(getActivity(), "信息提示", "是否退出当前帐号?", (obj)->{
+        CommomDialog dlg = new CommomDialog(getActivity(), "信息提示", "是否退出当前帐号?", (Object obj) ->{
             //OK
             LocalStorage.setItem("username", "");
             LocalStorage.setItem("password", "");

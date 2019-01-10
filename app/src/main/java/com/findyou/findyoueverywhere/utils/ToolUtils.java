@@ -89,4 +89,97 @@ public class ToolUtils {
             return isMatch;
         }
     }
+
+    //密码检查
+    //密码要求大小写字母，数字三种都要有输入，并且6-20位，否则
+    //弹出相应提示---缺少大写字母或缺少数字或缺少小写字母或位数不够
+    public static int isCorrectPassWord(String password) {
+        int  flag = -5;
+        if (password.length() > 20 || password.length() < 6) {
+            return flag;
+        } else {
+            flag = isContainAll(password);
+            return flag;
+        }
+    }
+
+    /**
+     * 规则1：至少包含大小写字母及数字中的一种
+     * 是否包含
+     *
+     * @param str
+     * @return
+     */
+    public static boolean isLetterOrDigit(String str) {
+        boolean isLetterOrDigit = false;//定义一个boolean值，用来表示是否包含字母或数字
+        for (int i = 0; i < str.length(); i++) {
+            if (Character.isLetterOrDigit(str.charAt(i))) {   //用char包装类中的判断数字的方法判断每一个字符
+                isLetterOrDigit = true;
+            }
+        }
+        String regex = "^[a-zA-Z0-9]+$";
+        boolean isRight = isLetterOrDigit && str.matches(regex);
+        return isRight;
+    }
+
+    /**
+     * 规则2：至少包含大小写字母及数字中的两种
+     * 是否包含
+     *
+     * @param str
+     * @return
+     */
+    public static boolean isLetterDigit(String str) {
+        boolean isDigit = false;//定义一个boolean值，用来表示是否包含数字
+        boolean isLetter = false;//定义一个boolean值，用来表示是否包含字母
+        for (int i = 0; i < str.length(); i++) {
+            if (Character.isDigit(str.charAt(i))) {   //用char包装类中的判断数字的方法判断每一个字符
+                isDigit = true;
+            } else if (Character.isLetter(str.charAt(i))) {  //用char包装类中的判断字母的方法判断每一个字符
+                isLetter = true;
+            }
+        }
+        String regex = "^[a-zA-Z0-9]+$";
+        boolean isRight = isDigit && isLetter && str.matches(regex);
+        return isRight;
+    }
+
+    /**
+     * 规则3：必须同时包含大小写字母及数字
+     * 是否包含
+     *
+     * @param str
+     * @return
+     */
+    public static int isContainAll(String str) {
+        boolean isDigit = false;//定义一个boolean值，用来表示是否包含数字
+        boolean isLowerCase = false;//定义一个boolean值，用来表示是否包含字母
+        boolean isUpperCase = false;
+        for (int i = 0; i < str.length(); i++) {
+            if (Character.isDigit(str.charAt(i))) {   //用char包装类中的判断数字的方法判断每一个字符
+                isDigit = true;
+            } else if (Character.isLowerCase(str.charAt(i))) {  //用char包装类中的判断字母的方法判断每一个字符
+                isLowerCase = true;
+            } else if (Character.isUpperCase(str.charAt(i))) {
+                isUpperCase = true;
+            }
+        }
+        String regex = "^[a-zA-Z0-9]+$";
+        boolean isRight = isDigit && isLowerCase && isUpperCase && str.matches(regex);
+        int flag = -4;
+        if(isRight == true){
+            flag = 0;
+        }else{
+            if(isDigit == false){
+                flag = -1;
+            }
+            if(isLowerCase == false){
+                flag = -2;
+            }
+            if(isUpperCase == false){
+                flag = -3;
+            }
+        }
+        return flag;
+    }
 }

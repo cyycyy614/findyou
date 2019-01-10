@@ -157,6 +157,31 @@ public class RegisterFragment extends BaseFragment {
             ToastUtils.showToast(getContext(), "请输入密码!");
             return;
         }
+
+        int pdFlag = ToolUtils.isCorrectPassWord(password);
+        switch (pdFlag){
+            case 0:
+                break;
+            case -1:
+                ToastUtils.showToast(getContext(), "密码中需要包含数字!");
+                break;
+            case -2:
+                ToastUtils.showToast(getContext(), "密码中需要包含小写字母!");
+                break;
+            case -3:
+                ToastUtils.showToast(getContext(), "密码中需要包含大写字母!");
+                break;
+            case -4:
+                ToastUtils.showToast(getContext(), "密码中有除了大写字母、小写字母和数字之外的字符了!");
+                break;
+            case -5:
+                ToastUtils.showToast(getContext(), "密码的长度为6-20位!");
+                break;
+        }
+
+        if(pdFlag != 0)
+            return;
+
         if(TextUtils.isEmpty(authCode)){
             ToastUtils.showToast(getContext(), "请输入验证码!");
             return;

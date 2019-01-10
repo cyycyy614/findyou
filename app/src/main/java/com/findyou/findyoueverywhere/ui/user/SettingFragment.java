@@ -43,10 +43,14 @@ public class SettingFragment extends BaseFragment {
                 return;
             }
             int versionCode = AppUtils.getAppVersionCode();
-            if(versionCode < appInfo.versionCode){
-                tv_new.setText("new");
-            }else {
-                tv_new.setText("");
+            try{
+                if(versionCode < appInfo.versionCode){
+                    tv_new.setText("new");
+                }else {
+                    tv_new.setText("");
+                }
+            }catch (Exception ex){
+
             }
         });
     }

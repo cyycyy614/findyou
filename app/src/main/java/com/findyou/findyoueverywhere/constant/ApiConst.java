@@ -5,8 +5,8 @@ package com.findyou.findyoueverywhere.constant;
  */
 
 public class ApiConst {
-    public final static String BASE_ROOT_URL = "http://www.joysw.com:8090/";
-//    public final static String BASE_ROOT_URL = "http://192.168.0.105:8090/";
+//    public final static String BASE_ROOT_URL = "http://www.joysw.com:8090/";
+    public final static String BASE_ROOT_URL = "http://192.168.60.188:8090/";
 //    public final static String BASE_ROOT_URL = "http://sw.joyvc.com:8090/";
     public final static String BASE_URL_DATA = BASE_ROOT_URL + "api/"; //数据接口
     public final static String BASE_URL_MODULE = "http://www.joysw.com:8090/api/"; //功能模块

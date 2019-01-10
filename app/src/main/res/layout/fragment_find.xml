@@ -43,53 +43,52 @@
         >
 
     </LinearLayout>
+
     <LinearLayout
         android:id="@+id/lin_findStory"
         android:layout_width="match_parent"
         android:layout_height="45dp"
         android:background="@color/fragment_bk"
-        android:gravity="center_vertical"
-        >
+        android:gravity="center_vertical">
         <!--<ImageView-->
-            <!--android:layout_width="24dp"-->
-            <!--android:layout_height="24dp"-->
-            <!--android:layout_marginLeft="10dp"-->
-            <!--android:src="@drawable/ic_news"-->
-            <!--/>-->
+        <!--android:layout_width="24dp"-->
+        <!--android:layout_height="24dp"-->
+        <!--android:layout_marginLeft="10dp"-->
+        <!--android:src="@drawable/ic_news"-->
+        <!--/>-->
         <TextView
             android:layout_width="5dp"
             android:layout_height="20dp"
-            android:background="@color/defaultColor"
             android:layout_marginLeft="10dp"
-            />
+            android:background="@color/defaultColor" />
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="找到你的故事圈"
             android:layout_marginLeft="5dp"
             android:layout_weight="1"
+            android:text="找到你的故事圈"
             android:textSize="16sp"
-            android:textStyle="bold"
-            />
+            android:textStyle="bold" />
+
         <TextView
             android:id="@+id/tv_findStory"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="快来分享你的故事吧"
-            android:maxLines="1"
             android:layout_marginLeft="15dp"
             android:layout_marginRight="5dp"
-            android:singleLine="true"
-            android:maxEms="18"
             android:ellipsize="end"
-            android:textColor="@color/defaultColor"
-            />
+            android:maxEms="18"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:text="快来分享你的故事吧"
+            android:textColor="@color/defaultColor" />
+
         <ImageView
             android:layout_width="10dp"
             android:layout_height="10dp"
-            android:src="@drawable/ic_menu_item_next"
             android:layout_marginRight="10dp"
-            />
+            android:src="@drawable/ic_menu_item_next" />
     </LinearLayout>
     <View
         android:layout_width="match_parent"

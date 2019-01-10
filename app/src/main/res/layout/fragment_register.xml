@@ -146,7 +146,7 @@
                 android:paddingLeft="10dp"
                 android:textColor="#ffffff"
                 android:textSize="14sp"
-                android:hint="请输入密码(6-8位数字和字母)"
+                android:hint="请输入密码(6-20位大小写字母和数字)"
                 android:textColorHint="#cccccc"
                 android:inputType="textPassword"
                 android:textCursorDrawable="@drawable/control_editview_cursor"

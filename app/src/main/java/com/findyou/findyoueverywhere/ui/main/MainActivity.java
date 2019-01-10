@@ -16,6 +16,7 @@ import com.findyou.findyoueverywhere.receiver.MyNotificationManager;
 import com.findyou.findyoueverywhere.ui.main.find.FindFragment;
 import com.findyou.findyoueverywhere.ui.main.map.HomeFragment;
 import com.findyou.findyoueverywhere.utils.ActivityManagerUtils;
+import com.findyou.findyoueverywhere.utils.LoadingUtils;
 import com.findyou.findyoueverywhere.utils.NotificationUtils;
 import com.findyou.findyoueverywhere.utils.PermissionsUtils;
 
@@ -125,5 +126,11 @@ public class MainActivity extends BaseActivity {
         });
         //dlg.setCancelBtnText("退出");
         dlg.showFromCenter();
+    }
+
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
+        LoadingUtils.finalClose();
     }
 }

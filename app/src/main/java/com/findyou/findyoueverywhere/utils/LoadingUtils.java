@@ -47,7 +47,14 @@ public class LoadingUtils {
         mHandler.post(()->{
             if(popWindow != null){
                 popWindow.close();
-                popWindow = null;
+            }
+        });
+
+    }
+    public static void finalClose(){
+        mHandler.post(()->{
+            if(popWindow != null){
+                popWindow.close();
             }
         });
 

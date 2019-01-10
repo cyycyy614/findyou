@@ -14,6 +14,7 @@ import android.os.Bundle;
 import android.support.v4.content.ContextCompat;
 import android.text.TextUtils;
 import android.view.Gravity;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
@@ -217,7 +218,7 @@ public class HomeFragment extends BaseFragment {
         ChildInfoBean item = this.data.get(position);
         new Thread(()->{
             Bitmap headbitmap = BitmapUtils.getBitmap(item.headimage);
-            View view = this.getLayoutInflater().inflate(R.layout.child_info_track_distance_marker, null, false);
+            View view = LayoutInflater.from(getActivity()).inflate(R.layout.child_info_track_distance_marker, null, false);
             LinearLayout lin_text = view.findViewById(R.id.lin_text);
             lin_text.setVisibility(View.GONE);
             TextView tv_txt = view.findViewById(R.id.tv_text);
@@ -310,8 +311,11 @@ public class HomeFragment extends BaseFragment {
         // 释放资源
         //在activity执行onDestroy时执行mMapView.onDestroy()，实现地图生命周期管理
         // 退出时销毁定位
-        mLocationClient.unRegisterLocationListener(myListener);
-        mLocationClient.stop();
+        if(mLocationClient != null){
+            mLocationClient.unRegisterLocationListener(myListener);
+            mLocationClient.stop();
+        }
+
         // 关闭定位图层
         baiduMap.setMyLocationEnabled(false);
         if(mapView != null) {

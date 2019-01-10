@@ -33,6 +33,7 @@ public class CommomDialog extends BasePopWindow {
 
     private CommonCallback cbOk;
     private CommonCallback cbCancel;
+    private CommomDialog target ;
 
     public CommomDialog(Activity context, String title, String msg, CommonCallback cbOk, CommonCallback cbCancel){
         super(context);

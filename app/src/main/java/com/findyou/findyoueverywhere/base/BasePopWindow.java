@@ -112,10 +112,11 @@ public class BasePopWindow {
 
     private void closePopWindow(PopupWindow popupWindow){
         if(popupWindow != null && popupWindow.isShowing()) {
-            if(mContext != null && !mContext.isFinishing()){
+            if(mContext != null){
                 popupWindow.dismiss();
+                popupWindow = null;
             }
-            popupWindow = null;
+
         }
     }
 

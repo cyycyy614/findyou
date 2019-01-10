@@ -63,7 +63,7 @@ public class LoginFragment extends BaseFragment {
             UserInfoBean bean = JsonUtils.convert(json, UserInfoBean.class);
             app.me = bean;
             //提示
-            ToastUtils.showToast(getContext(), "登录成功!");
+            //ToastUtils.showToast(getContext(), "登录成功!");
             //保存用户名,密码
             LocalStorage.setItem("username", username);
             LocalStorage.setItem("password", md5password);
@@ -84,6 +84,11 @@ public class LoginFragment extends BaseFragment {
     @OnClick(R.id.tv_forgetPassword)
     public void tv_forgetPassword_Click(View view){
         ActivityManagerUtils.startActivity(getContext(), ForgetFragment.class, null);
+    }
+
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
     }
 
     @OnClick(R.id.tv_serviceAgreement)

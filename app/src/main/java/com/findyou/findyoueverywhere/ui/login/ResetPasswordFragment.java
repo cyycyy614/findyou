@@ -39,6 +39,31 @@ public class ResetPasswordFragment extends BaseFragment {
     public void tv_submit_Click(View view){
         String newPassword = et_newPassword.getText().toString();
         String password = et_password.getText().toString();
+
+        int pdFlag = ToolUtils.isCorrectPassWord(password);
+        switch (pdFlag){
+            case 0:
+                break;
+            case -1:
+                ToastUtils.showToast(getContext(), "密码中需要包含数字!");
+                break;
+            case -2:
+                ToastUtils.showToast(getContext(), "密码中需要包含小写字母!");
+                break;
+            case -3:
+                ToastUtils.showToast(getContext(), "密码中需要包含大写字母!");
+                break;
+            case -4:
+                ToastUtils.showToast(getContext(), "密码中有除了大写字母、小写字母和数字之外的字符了!");
+                break;
+            case -5:
+                ToastUtils.showToast(getContext(), "密码的长度为6-20位!");
+                break;
+        }
+
+        if(pdFlag != 0)
+            return;
+
         if(TextUtils.isEmpty(newPassword)){
             ToastUtils.showToast(getContext(),"请输入新密码!");
             return;

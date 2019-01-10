@@ -11,6 +11,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.findyou.findyoueverywhere.R;
+import com.findyou.findyoueverywhere.utils.LoadingUtils;
 import com.findyou.findyoueverywhere.utils.fragmentbackkeyhelper.BackHandlerHelper;
 
 import java.util.HashMap;
@@ -71,6 +72,7 @@ public class EmptyActivity extends BaseActivity {
         if(fragment != null){
             fragments.remove(this.fragmentName);
         }
+        LoadingUtils.finalClose();
     }
 
     public void showStatusBar(boolean isShow) {
